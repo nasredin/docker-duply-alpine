@@ -1,4 +1,5 @@
 FROM alpine:latest
+RUN echo 'http://nl.alpinelinux.org/alpine/edge/testing' >> /etc/apk/repositories 
 RUN apk update
 RUN apk add bash \
         duply \
@@ -9,7 +10,8 @@ RUN apk add bash \
         py2-paramiko \
         pwgen \
         rsync \
-        openssh-client && pip install --upgrade pip
+        openssh-client \
+        megatools&& pip install --upgrade pip
 RUN pip install pydrive
 ENV HOME /root
 ENV HOSTNAME duply-backup
