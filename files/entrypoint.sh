@@ -37,7 +37,8 @@ All other commands will be interpreted as commands to duply.
 EOF
         ;;
     *)
+	echo "rates: $U/$D"
         DUPL_PARAMS="$DUPL_PARAMS --allow-source-mismatch"
-        exec duply "$@"
+        exec trickle -s -u $U -d $D duply "$@" $DUPL_PARAMS
         ;;
 esac
