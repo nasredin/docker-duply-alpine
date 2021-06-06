@@ -3,11 +3,11 @@ RUN echo 'http://nl.alpinelinux.org/alpine/edge/testing' >> /etc/apk/repositorie
 RUN apk update
 RUN apk add bash \
         duply \
-        py2-pip \
+        py-pip \
         haveged \
         ncftp \
         py-boto \
-        py2-paramiko \
+        py-paramiko \
         pwgen \
         rsync \
         openssh-client \
