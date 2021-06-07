@@ -39,6 +39,6 @@ EOF
     *)
 	echo "rates: $U/$D"
         DUPL_PARAMS="$DUPL_PARAMS --allow-source-mismatch"
-        exec trickle -s -u $U -d $D duply "$@" $DUPL_PARAMS
+        exec duply "$@" $DUPL_PARAMS
         ;;
 esac
